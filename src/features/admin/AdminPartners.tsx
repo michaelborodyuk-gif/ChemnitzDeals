@@ -1,5 +1,5 @@
 import React from "react";
-import { MOCK_PARTNERS, CATEGORY_EMOJIS } from "../constants";
+import { MOCK_PARTNERS, CATEGORY_EMOJIS } from "../../shared/config/constants";
 
 const AdminPartners: React.FC = () => {
   return (

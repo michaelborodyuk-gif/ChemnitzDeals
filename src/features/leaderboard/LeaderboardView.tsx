@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Trophy, Stamp, Flame } from "lucide-react";
-import { useUser } from "../context/UserContext";
+import { useUser } from "../../shared/context/UserContext";
 
 // Mock leaderboard data (will come from Supabase in production)
 const MOCK_LEADERBOARD = [

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MapPin, Instagram, Flame, Gift, ChevronRight, UserPlus, Check, X } from "lucide-react";
-import { useUser } from "../context/UserContext";
-import { CATEGORY_EMOJIS, CATEGORY_LABELS, MOCK_TIPS } from "../constants";
-import Logo from "./Logo";
+import { useUser } from "../../shared/context/UserContext";
+import { CATEGORY_EMOJIS, CATEGORY_LABELS, MOCK_TIPS } from "../../shared/config/constants";
+import Logo from "../../shared/components/Logo";
 
 // ============================================================
 // STAMP CARD VISUAL

@@ -2,25 +2,25 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, Bell, Stamp, Gift, User, Trophy } from "lucide-react";
-import Sidebar from "./components/Sidebar";
-import StampCardTab from "./components/StampCardTab";
-import RewardsTab from "./components/RewardsTab";
-import ProfileTab from "./components/ProfileTab";
-import LeaderboardTab from "./components/LeaderboardTab";
-import Logo from "./components/Logo";
-import { ThemeProvider } from "./context/ThemeContext";
-import { LanguageProvider } from "./context/LanguageContext";
-import { AuthProvider } from "./context/AuthContext";
-import { UserProvider, useUser } from "./context/UserContext";
+import Sidebar from "./shared/components/Sidebar";
+import StampCardView from "./features/stamps/StampCardView";
+import RewardsView from "./features/rewards/RewardsView";
+import ProfileView from "./features/profile/ProfileView";
+import LeaderboardView from "./features/leaderboard/LeaderboardView";
+import Logo from "./shared/components/Logo";
+import { ThemeProvider } from "./shared/context/ThemeContext";
+import { LanguageProvider } from "./shared/context/LanguageContext";
+import { AuthProvider } from "./shared/context/AuthContext";
+import { UserProvider, useUser } from "./shared/context/UserContext";
 
 // Admin imports
-import AdminLayout from "./admin/AdminLayout";
-import AdminLogin from "./admin/AdminLogin";
-import AdminDashboard from "./admin/AdminDashboard";
-import AdminPartners from "./admin/AdminPartners";
-import AdminRewards from "./admin/AdminRewards";
-import AdminUsers from "./admin/AdminUsers";
-import AdminClaims from "./admin/AdminClaims";
+import AdminLayout from "./features/admin/AdminLayout";
+import AdminLogin from "./features/admin/AdminLogin";
+import AdminDashboard from "./features/admin/AdminDashboard";
+import AdminPartners from "./features/admin/AdminPartners";
+import AdminRewards from "./features/admin/AdminRewards";
+import AdminUsers from "./features/admin/AdminUsers";
+import AdminClaims from "./features/admin/AdminClaims";
 
 function UserAppContent() {
   const [activeTab, setActiveTab] = useState("stamps");
@@ -87,10 +87,10 @@ function UserAppContent() {
             transition={{ duration: 0.25 }}
             className="h-full"
           >
-            {activeTab === "stamps" && <StampCardTab />}
-            {activeTab === "rewards" && <RewardsTab />}
-            {activeTab === "profile" && <ProfileTab />}
-            {activeTab === "leaderboard" && <LeaderboardTab />}
+            {activeTab === "stamps" && <StampCardView />}
+            {activeTab === "rewards" && <RewardsView />}
+            {activeTab === "profile" && <ProfileView />}
+            {activeTab === "leaderboard" && <LeaderboardView />}
           </motion.div>
         </AnimatePresence>
       </main>

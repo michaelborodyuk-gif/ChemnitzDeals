@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Stamp, Gift, Flame, MapPin, Trophy } from "lucide-react";
-import { useUser } from "../context/UserContext";
-import { CATEGORY_EMOJIS } from "../constants";
+import { useUser } from "../../shared/context/UserContext";
+import { CATEGORY_EMOJIS } from "../../shared/config/constants";
 
 const ProfileTab: React.FC = () => {
   const { profile, stampCards, rewardClaims, partners, recentStamps } = useUser();

@@ -1,6 +1,6 @@
 import React from "react";
 import { Store, Users, Stamp, Gift } from "lucide-react";
-import { MOCK_PARTNERS } from "../constants";
+import { MOCK_PARTNERS } from "../../shared/config/constants";
 
 const AdminDashboard: React.FC = () => {
   const stats = [

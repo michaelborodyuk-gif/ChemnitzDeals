@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from "react";
 import { Partner, StampCard, Stamp, StoryLimit, RewardClaim, UserProfile, STAMP_CONFIG } from "../types";
-import { MOCK_PARTNERS } from "../constants";
+import { MOCK_PARTNERS } from "../config/constants";
 import { supabase, isSupabaseConfigured as isSupabaseConfiguredFlag } from "../lib/supabase";
 import { useAuth } from "./AuthContext";
 

@@ -1,4 +1,4 @@
-import { Partner, Category } from "./types";
+import { Partner, Category } from "../types";
 
 // ============================================================
 // BRAND
